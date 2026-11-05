@@ -58,7 +58,7 @@ The tolerances on $\Delta L$ and temperature are achievable, but sub-nanometre c
 
 - **DOB** (device operation bandwidth): width of the band around $f_c$ in which $|H_\mathrm{MZI}|$ deviates from $|H_\mathrm{id}|$ by at most 1%.
 - **$B/\mathrm{DOB}$**: must be below 1, otherwise the signal bandwidth $B$ exceeds the linear region of the device.
-- **$B/\delta f$**: ratio between the signal bandwidth and the detuning $\delta f$ of the zero from the carrier; if it is too small, the signal "sees" a transfer function very different from the ideal one.
+- **$B/\delta f$**: ratio between the signal bandwidth and the detuning $\delta f$ of the nearest zero from the carrier; if it is too small, the signal "sees" a transfer function very different from the ideal one.
 - **Quality factor** $Q = f_c / \mathrm{DOB}$: gives the order of magnitude of the maximum tolerable errors on $\Delta L$, $n_\mathrm{eff}$, waveguide width and thickness, and temperature.
 - **Average deviation** $\mathrm{AD} = \frac{1}{T}\int_T |P(t) - P_\mathrm{id}(t)|\,dt$, computed on normalized output intensities over each row (uniform rows, which have no edges, are excluded).
 - **Fidelity** $F$: normalized overlap integral between $H_\mathrm{MZI}$ and $H_\mathrm{id}$ over the signal band $[f_c - B/2,\ f_c + B/2]$.

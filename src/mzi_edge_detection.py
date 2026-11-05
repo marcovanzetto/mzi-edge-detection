@@ -90,10 +90,11 @@ DphiL_id = lambda f: (2 * np.pi * f / c) * n_eff_id * DL_id
 DphiL = lambda f: (2 * np.pi * f / c) * n_eff * DL
 
 FSR = c / (n_eff * DL)
-df = np.abs(f_c - (m+1)*FSR)
 
-if dn_eff_wh <= 0: # the target minimum changes side with negative tolerance (with no error the m-th minimum is already aligned)
-    df = np.abs(f_c - m*FSR)
+# detuning of the zero closest to the carrier (the zeros of the TF are at the integer multiples of FSR):
+# after compensation it is the target zero (m + dm_id), without compensation it can be the (m-1)-th,
+# the m-th or the (m+1)-th zero, depending on the sign and size of the error
+df = np.abs(f_c - np.round(f_c / FSR) * FSR)
 
 
 # =============================================================================
